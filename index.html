@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Game</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body>
+<span class="gameName">NIGHT RUNNER</span>
+<div class="gameCanvasField">
+    <div class="wrapper">
+        <div id="menu" class="menu">
+            <span id="gameOver" class="gameOver">game-over</span>
+            <button id="playAgain" class="playAgain">
+                Restart
+            </button>
+            <button id="start" class="start">
+                start
+            </button>
+            <button id="resume" class="resume">
+                resume
+            </button>
+            <button id="nextLevel" class="nextLevel">
+                next Level
+            </button>
+            <div id="options" class="options">
+                <h3>OPTIONS</h3>
+                <label for="soundEff">Sound Effects</label>
+                <input id="soundEff" type="checkbox"><br>
+                <label for="soundOnOff">Sound ON/OFF</label>
+                <input id="soundOnOff" type="checkbox"><br>
+                <span>Sound volume: </span>
+                <input id="soundVolume" type="range" value="0.5" max="1" min="0" step="0.1">
+            </div>
+            <div id="shop" class="shop">
+                <h3>SHOP</h3>
+                <button id="buyLifeButton" class="buyLifeButton">Buy 1 Life = 10 coins</button>
+            </div>
+        </div>
+        <span id="showGameTime" class="showGameTime"></span>
+        <canvas id="gameCanvas" width="800" height="600">
+        </canvas>
+    </div>
+    <div class="wrapper">
+        <div class="gameInfo">
+            <span>Each Level max speed and distance increasing</span>
+            <span>ESC - open menu</span>
+            <span>"A", "D", "&larr;", "&rarr;" - move LEFT / RIGHT</span>
+            <span>"W", "&uarr;" - jump up</span>
+            <span>"S", "&darr;" - jump off</span>
+        </div>
+    </div>
+</div>
+<script src="scripts/resources.js"></script>
+<script src="scripts/classes.js"></script>
+<script src="scripts/index.js"></script>
+
+</body>
+</html>
