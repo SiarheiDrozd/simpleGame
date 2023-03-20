@@ -103,17 +103,19 @@ let coinsDisplay;
  * */
 function init() {
     window.addEventListener('keydown', function (e) {
+        e.preventDefault();
+
         if (e.which === 27) {
             if (!isGameOver) {
                 displayMenu();
             }
         }
-    });
-    window.addEventListener('keydown', function (e) {
         inputs = (inputs || []);
         inputs[e.keyCode] = true;
     });
     window.addEventListener('keyup', function (e) {
+        e.preventDefault();
+
         if (inputs) {
             inputs[e.keyCode] = false;
         }
